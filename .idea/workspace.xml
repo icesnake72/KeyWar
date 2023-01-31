@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KeyWar.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +61,47 @@
       <option name="presentableId" value="Default" />
       <updated>1675158901034</updated>
     </task>
+    <task id="LOCAL-00001" summary="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+      <created>1675180404968</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675180404968</updated>
+    </task>
+    <task id="LOCAL-00002" summary="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+      <created>1675180422433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675180422433</updated>
+    </task>
+    <task id="LOCAL-00003" summary="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+      <created>1675180442148</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675180442148</updated>
+    </task>
+    <task id="LOCAL-00004" summary="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+      <created>1675180459075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675180459076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainFrame.java</url>
-          <line>155</line>
+          <line>157</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>

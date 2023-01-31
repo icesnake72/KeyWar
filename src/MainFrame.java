@@ -61,15 +61,15 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
         while ( running ) {
             try {
                 Thread.sleep(1000 );
-//                AttackLabel newLabel = new AttackLabel(String.format("%d", System.currentTimeMillis()), this);
-//                panel.add(newLabel);
-//                panel.add(new JLabel("Test"));
-//                newLabel.revalidate();
-//                newLabel.repaint();
-//                newLabel.update(newLabel.getGraphics());
-//                labelList.add(newLabel);
-//                panel.validate();
-//                panel.repaint();
+                AttackLabel newLabel = new AttackLabel(String.format("%d", System.currentTimeMillis()), this);
+                panel.add(newLabel);
+                panel.add(new JLabel("Test"));
+                newLabel.revalidate();
+                newLabel.repaint();
+                newLabel.update(newLabel.getGraphics());
+                labelList.add(newLabel);
+                panel.validate();
+                panel.repaint();
 
             } catch (NullPointerException e)
             {
@@ -99,6 +99,8 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
         rect.y = 0;
         rect.height = 30;
         rect.width = w;
+        label.setForeground(Color.DARK_GRAY);
+        label.setBackground(Color.decode("#11A458"));
         label.setBounds(rect);
     }
 
@@ -160,7 +162,9 @@ class AttackLabel extends  JLabel implements Runnable {
         this.x = ( Math.abs(rnd.nextInt()) % 500) - 100;
         this.x = Math.max(this.x, 0);
         this.newY = 0;
-        setLocation(x, newY);
+        this.setBounds(x, newY, 300, 30);
+//        setBounds(rect);
+        // setLocation(x, newY);
 
         //running = true;
         Thread thread = new Thread(this);
