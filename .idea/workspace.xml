@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!">
+    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="JLabel 동적 create and falling down">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
@@ -35,7 +35,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager">
@@ -89,22 +90,19 @@
       <option name="project" value="LOCAL" />
       <updated>1675180459076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JLabel 동적 create and falling down">
+      <created>1675182638930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675182638930</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MainFrame.java</url>
-          <line>157</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="JLabel 동적 create and falling down" />
+    <option name="LAST_COMMIT_MESSAGE" value="JLabel 동적 create and falling down" />
   </component>
 </project>
