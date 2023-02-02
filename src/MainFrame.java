@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -120,13 +122,14 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
         label.setBounds(rect);
     }
 
-    public void KillMe(AttackLabel label) {
+    public void KillMe(@NotNull AttackLabel label, boolean dieByHit) {
         lbTable.remove(label.getText());
         panel.remove(label);
         System.out.println(label + " 죽습니다.");
         label = null;
 
-        DeadCount++;
+        if ( !dieByHit )
+            DeadCount++;
     }
 
     @Override
@@ -194,6 +197,7 @@ class AttackLabel extends  JLabel implements Runnable {
     private int newY;
     private int x;
     private final AtomicBoolean running = new AtomicBoolean(false);
+    private final AtomicBoolean dieByHit = new AtomicBoolean(false);
 
     MainFrame mainFrame;
 
@@ -235,6 +239,7 @@ class AttackLabel extends  JLabel implements Runnable {
     @Override
     public void run() {
         running.set(true);
+        dieByHit.set(false);
         while( running.get() ) { //&& !Thread.currentThread().isInterrupted()
             try {
                 Thread.sleep( 10 );
@@ -255,7 +260,7 @@ class AttackLabel extends  JLabel implements Runnable {
         }
 
         System.out.println("Label Thread 종료됨");
-        mainFrame.KillMe(this);
+        mainFrame.KillMe(this, dieByHit.get());
     }
 
     private boolean CheckLive() {
@@ -271,6 +276,8 @@ class AttackLabel extends  JLabel implements Runnable {
     }
 
     public void StopThread() {
+
+        dieByHit.set(true);
         running.set(false);
     }
 
@@ -336,8 +343,3 @@ class KoreanWordList {
     }
 }
 
-
-
-class LabelList extends LinkedList<JLabel> {
-
-}
