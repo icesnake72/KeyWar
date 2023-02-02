@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,12 +8,15 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainFrame extends JFrame implements ComponentListener, ActionListener, Runnable {
 
     public static final int UNTIL_DEAD = 10;
     long score = 0;
-    int DeadCount;
+     // int DeadCount;
+    private final AtomicInteger DeadCount = new AtomicInteger(0);
+    private final AtomicBoolean running = new AtomicBoolean( false );
     JTextField tf;
     AttackLabel label;
     JPanel panel;
@@ -25,6 +30,8 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
 
         setTitle( strTitle );
         setSize( width, height);
+
+        CreateMenu();
 
 //        JButton btn1 = new JButton("여길 눌러!!!");
 //        JCheckBox chkBox = new JCheckBox("Check Me Please~~~");
@@ -41,9 +48,6 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
 //        this.add(chkBox);
 //        this.add(slider);
 
-
-
-
         panel = new JPanel();
         panel.setLayout(null);
 
@@ -57,20 +61,41 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
         getContentPane().addComponentListener(this);
         tf.addActionListener(this);
 
-        // setResizable(false);
-        //pack();
+        setResizable(false);
+        // pack();
         setLocationRelativeTo(null);
         setVisible( true );
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
+    public void CreateMenu() {
+        MenuActionListener ma = new MenuActionListener();
+        ma.setMainFrame( this );
 
+        JMenuItem item1 = new JMenuItem("New Game");
+        item1.addActionListener(ma);
+        JMenuItem item2 = new JMenuItem("Exit");
+        item2.addActionListener(ma);
+
+        JMenuBar mb = new JMenuBar();
+        JMenu screenMenu = new JMenu("메뉴바");
+        screenMenu.add(item1);
+        screenMenu.addSeparator();
+        screenMenu.add(item2);
+        mb.add(screenMenu);
+        setJMenuBar(mb);
+    }
+
+    public boolean isRunning() {
+        // System.out.println(DeadCount.get());
+        return running.get();
     }
 
     @Override
     public void run() {
-        DeadCount = 0;
-
-        while ( DeadCount < UNTIL_DEAD ) {
+        DeadCount.set(0);
+        running.set(true);
+        while ( DeadCount.get() < UNTIL_DEAD ) {
             try {
                 Thread.sleep(1000 );
                 String str = kw.GetRandomString();
@@ -95,6 +120,8 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
 
         JOptionPane.showMessageDialog(this,
                                 String.format("게임 종료\n당신의 점수는 %d점 입니다.", score));
+        DeadCount.set(0);
+        running.set(false);
     }
 
     @Override
@@ -120,13 +147,13 @@ public class MainFrame extends JFrame implements ComponentListener, ActionListen
         label.setBounds(rect);
     }
 
-    public void KillMe(AttackLabel label) {
+    public void KillMe(@NotNull AttackLabel label) {
         lbTable.remove(label.getText());
         panel.remove(label);
         System.out.println(label + " 죽습니다.");
         label = null;
 
-        DeadCount++;
+        DeadCount.incrementAndGet();
     }
 
     @Override
@@ -278,6 +305,37 @@ class AttackLabel extends  JLabel implements Runnable {
     protected void finalize() throws Throwable {
         super.finalize();
         System.out.println("나 죽어요!!!");
+    }
+}
+
+
+
+class MenuActionListener implements ActionListener {
+
+    protected MainFrame mainFrame;
+
+    public void setMainFrame(MainFrame mf) {
+        mainFrame = mf;
+    }
+
+    @Override
+    public void actionPerformed(@NotNull ActionEvent e) {
+        switch ( e.getActionCommand() )
+        {
+            case "New Game":
+                if ( !mainFrame.isRunning() ) {
+                    Thread th1 = new Thread(mainFrame);
+                    th1.start();
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "게임 종료된 뒤에 New Game 하셈~");
+                }
+                break;
+
+            case "Exit":
+                System.exit(0);
+        }
+
     }
 }
 
