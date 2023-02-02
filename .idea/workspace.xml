@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="JLabel 동적 create and falling down">
+    <list default="true" id="d6519d37-b27a-43e8-b09d-aa35e9609aa1" name="변경" comment="글자 맟추면 라벨 삭제, 10개 떨어뜨리면 게임 종료, 메시지 박스">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KeyWar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KeyWar.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +22,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d68790fa-e3db-4045-84e1-d747f88e34c4" />
+        <option name="url" value="https://github.com/icesnake72/KeyWar.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,6 +53,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "settings.editor.selected.configurable": "preferences.keymap"
@@ -97,12 +120,20 @@
       <option name="project" value="LOCAL" />
       <updated>1675182638930</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="글자 맟추면 라벨 삭제, 10개 떨어뜨리면 게임 종료, 메시지 박스">
+      <created>1675343961844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675343961844</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JLabel 떨어지는데 까지 구현 완료&#10;새로 생기는거 안됨!!!" />
     <MESSAGE value="JLabel 동적 create and falling down" />
-    <option name="LAST_COMMIT_MESSAGE" value="JLabel 동적 create and falling down" />
+    <MESSAGE value="글자 맟추면 라벨 삭제, 10개 떨어뜨리면 게임 종료, 메시지 박스" />
+    <option name="LAST_COMMIT_MESSAGE" value="글자 맟추면 라벨 삭제, 10개 떨어뜨리면 게임 종료, 메시지 박스" />
   </component>
 </project>
